@@ -99,6 +99,28 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+DEFAULT_FILE_STORAGE = 'storages.backends.gs.GSBotoStorage'
+GS_ACCESS_KEY_ID = 'TU_YO'
+GS_SECRET_ACCESS_KEY = 'TU_YO'
+GS_BUCKET_NAME = 'TU_BACKET'
+# Static files (CSS, JavaScript, Images)
+
+
+
+STATICFILES_STORAGE = 'storages.backends.gs.GSBotoStorage'
+
+
+
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+# STATIC_URL = 'https://storage.googleapis.com/www.example.com/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), MEDIA_ROOT,)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -116,16 +138,3 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-DEFAULT_FILE_STORAGE = 'storages.backends.gs.GSBotoStorage'
-GS_ACCESS_KEY_ID = 'GOOGC56DCRKFMVZAZSTW'
-GS_SECRET_ACCESS_KEY = 'XKeVVt4Ji1HhmBv3+8SlKcs7RhHD3NkVizYQkf5e'
-GS_BUCKET_NAME = 'storage.skillstudents.org'
-
-
-STATICFILES_STORAGE = 'storages.backends.gs.GSBotoStorage'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, '')
-
-STATIC_URL = '/static/'
-
-MEDIA_URL = '/media/'
